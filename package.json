@@ -1,0 +1,51 @@
+{
+  "name": "@tomdewildt/opencode-sidebar-context",
+  "version": "0.0.0",
+  "description": "OpenCode plugin that shows context usage, cache hit rate and cost in the sidebar",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "opentui",
+    "solidjs"
+  ],
+  "homepage": "https://github.com/tomdewildt/opencode-sidebar-context",
+  "bugs": {
+    "url": "https://github.com/tomdewildt/opencode-sidebar-context/issues"
+  },
+  "license": "MIT",
+  "author": "Tom de Wildt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomdewildt/opencode-sidebar-context.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    "./tui": "./dist/tui.js"
+  },
+  "scripts": {
+    "build": "bun run build.ts",
+    "lint": "oxlint build.ts src/ test/",
+    "format": "oxfmt --check build.ts src/ test/",
+    "types": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "^2.0.27",
+    "@opentui/core": "^0.6.2",
+    "@opentui/solid": "^0.6.2",
+    "@types/bun": "^1.4.3",
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0",
+    "solid-js": "^1.9.17",
+    "typescript": "^7.0.2"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": ">=2.0.25",
+    "@opentui/core": ">=0.5.16",
+    "@opentui/solid": ">=0.5.16",
+    "solid-js": ">=1.9.0"
+  }
+}
