@@ -42,7 +42,7 @@ export default Plugin.define({
   id: "tomdewildt.sidebar.context",
   setup(context) {
     return context.ui.slot({
-      prepend: "sidebar.content",
+      before: "sidebar.content",
       render: (input) => <Section context={context} sessionID={input.sessionID} />,
     });
   },
